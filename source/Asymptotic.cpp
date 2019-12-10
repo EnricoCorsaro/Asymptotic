@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
     string inputFileName = baseOutputDirName + outputSubDirName + "/data/" + runNumber + ".txt";
 
     cerr << "------------------------------------------------------ " << endl;
-    cout << " Performing asymptotic fit for l = " + inputDegree + " modes in " + CatalogID + StarID << endl;
+    cerr << " Performing asymptotic fit for l = " + inputDegree + " modes in " + CatalogID + StarID << endl;
     cerr << "------------------------------------------------------ " << endl;
 
 
@@ -133,6 +133,7 @@ int main(int argc, char *argv[])
         }
     }
 
+
     // Uniform Prior
     
     int NpriorTypes = 1;                                        // Total number of prior types included in the computation
@@ -193,16 +194,20 @@ int main(int argc, char *argv[])
         DeltaNu = hyperParametersMinima(0);
         epsilon = hyperParametersMinima(1);
 
+
         // Check if alpha is fixed or not. If fixed, remove it from the prior
         // list and set its value to the one given in the prior file.
 
         if (hyperParametersMinima(3) == hyperParametersMaxima(3))
         {
             Ndimensions--;
+            parametersMinima.resize(Ndimensions);
+            parametersMaxima.resize(Ndimensions);
             parametersMinima << hyperParametersMinima(2), hyperParametersMinima(4);
             parametersMaxima << hyperParametersMaxima(2), hyperParametersMaxima(4);
             alpha = hyperParametersMinima(3);
         }
+
 
         // Check if beta is fixed or not. If fixed, remove it from the prior
         // list and set its value to the one given in the prior file.
@@ -298,10 +303,10 @@ int main(int argc, char *argv[])
     configuringParameters = File::arrayXXdFromFile(inputFile, Nparameters, Ncols);
     inputFile.close();
 
-    if (Nparameters != 8)
+    if (Nparameters > 9 || Nparameters < 8)
     {
         cerr << "Wrong number of input parameters for NSMC algorithm." << endl;
-        cerr << "There must be 8 parameters." << endl; 
+        cerr << "There must be either 8 or 9 parameters. In this case the last parameter is always ignored." << endl; 
         exit(EXIT_FAILURE);
     }
     
