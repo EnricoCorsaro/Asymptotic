@@ -2,7 +2,7 @@
 
 <p align="center">
 <a href="https://github.com/EnricoCorsaro/Asymptotic"><img src="https://img.shields.io/badge/GitHub-Asymptotic-yellow"/></a>
-<a href="https://github.com/EnricoCorsaro/Asymptotic/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-CC%20BY--SA-blue"/></a>
+<a href="https://github.com/EnricoCorsaro/Asymptotic/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-MIT-blue"/></a>
 <a href='https://diamonds.readthedocs.io/en/latest/?badge=latest'><img src='https://readthedocs.org/projects/diamonds/badge/?version=latest' alt='Documentation Status' /></a>
 <a href="https://github.com/EnricoCorsaro/Asymptotic/issues"><img src="https://img.shields.io/github/issues-closed/EnricoCorsaro/Asymptotic"/></a>
 <img width="500" src="https://raw.githubusercontent.com/EnricoCorsaro/DIAMONDS/master/docs/figures/DIAMONDS_LOGO_WHITE.png"/>
