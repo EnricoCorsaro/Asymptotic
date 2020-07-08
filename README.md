@@ -24,6 +24,3 @@ The procedure to retrieve the Asymptotic extension is identical to that of DIAMO
 
 ### Documentation
 Please make sure you read the documentation at [diamonds.readthedocs.io](http://diamonds.readthedocs.io/) before installing and using the code. This extension requires that the DIAMONDS code is first installed in your system. The installation of the Asymptotic extension is the same as that done for DIAMONDS.
-
-### Tutorials
-To run the tutorials provided in the package, please follow the guidelines presented in [tutorials/README.md](https://github.com/EnricoCorsaro/Asymptotic/blob/master/tutorials/README.md)
