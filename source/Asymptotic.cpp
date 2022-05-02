@@ -69,9 +69,9 @@ int main(int argc, char *argv[])
     string baseInputDirName = baseOutputDirName + outputSubDirName + "/data/";
     string inputFileName = baseOutputDirName + outputSubDirName + "/data/" + runNumber + ".txt";
 
-    cerr << "------------------------------------------------------ " << endl;
-    cerr << " Performing asymptotic fit for l = " + inputDegree + " modes in " + CatalogID + StarID << endl;
-    cerr << "------------------------------------------------------ " << endl;
+    cout << "------------------------------------------------------ " << endl;
+    cout << " Performing asymptotic fit for l = " + inputDegree + " modes in " + CatalogID + StarID << endl;
+    cout << "------------------------------------------------------ " << endl;
 
 
     // Read the input dataset
@@ -419,7 +419,7 @@ int main(int argc, char *argv[])
     bool writeMarginalDistributionToFile = true;
     results.writeParametersSummaryToFile("parameterSummary.txt", credibleLevel, writeMarginalDistributionToFile);
 
-    cerr << "Process #" << runNumber << " under subdir: " + outputSubDirName + " has been completed." << endl;
+    cout << "Process # " << runNumber << " under subdir: " + outputSubDirName + " has been completed." << endl;
 
     return EXIT_SUCCESS;
 }
